@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detection History - SwimSafe AI</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: #fff;
+            margin: 0;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: rgba(0,0,0,0.7);
+            border-radius: 18px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            padding: 32px 32px 24px 32px;
+        }
+        h1 {
+            text-align: center;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 18px;
+        }
+        .history-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 24px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .history-table th, .history-table td {
+            padding: 14px 10px;
+            text-align: center;
+        }
+        .history-table th {
+            background: #2a5298;
+            color: #fff;
+            font-weight: 700;
+        }
+        .history-table tr:nth-child(even) {
+            background: rgba(255,255,255,0.06);
+        }
+        .history-table tr:hover {
+            background: #1e3c72;
+        }
+        .history-img {
+            width: 120px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(42,82,152,0.2);
+        }
+        .actions {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            margin-top: 18px;
+        }
+        .actions a {
+            background: #2a5298;
+            color: #fff;
+            padding: 12px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.2s;
+            box-shadow: 0 2px 8px rgba(42,82,152,0.2);
+        }
+        .actions a:hover {
+            background: #1e3c72;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 32px;
+            color: #b0c4de;
+            font-size: 0.95em;
+        }
+        @media (max-width: 1000px) {
+            .container { padding: 10px; }
+            .history-img { width: 80px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-history"></i> Drowning Detection History</h1>
+        <div class="actions">
+            <a href="/" style="margin-bottom: 18px;"><i class="fas fa-home"></i> Back to Live Detection</a>
+        </div>
+        <table class="history-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Timestamp</th>
+                    <th>Detection Image</th>
+                </tr>
+            </thead>
+            <tbody id="history-table-body">
+                {% for row in logs %}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>{{ row['timestamp'] }}</td>
+                    <td><a href="/{{ row['image_path'] }}" target="_blank"><img src="/{{ row['image_path'] }}" class="history-img" alt="Detection"></a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="footer">
+        &copy; 2025 SwimSafe AI. All rights reserved.
+    </div>
+    <script>
+        async function fetchHistory() {
+            try {
+                const resp = await fetch('/history_data');
+                const data = await resp.json();
+                const tbody = document.getElementById('history-table-body');
+                tbody.innerHTML = '';
+                data.logs.forEach((row, idx) => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td>${idx + 1}</td>
+                        <td>${row.timestamp}</td>
+                        <td><a href="/${row.image_path}" target="_blank"><img src="/${row.image_path}" class="history-img" alt="Detection"></a></td>
+                    `;
+                    tbody.appendChild(tr);
+                });
+            } catch (e) {
+                // Optionally handle error
+            }
+        }
+        setInterval(fetchHistory, 2000);
+    </script>
+</body>
+</html>
