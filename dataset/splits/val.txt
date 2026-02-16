@@ -1,0 +1,6 @@
+# Validation Set - 15% of dataset
+# Format: video_id,filename,class
+
+V006,pool_drowning_passive_002.mp4,2
+V008,pool_distress_002.mp4,3
+V012,pool_drowning_passive_003.mp4,2
