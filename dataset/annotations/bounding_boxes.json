@@ -1,0 +1,157 @@
+{
+  "info": {
+    "description": "SwimSafe AI Drowning Detection Dataset",
+    "version": "1.0",
+    "year": 2026,
+    "contributor": "SwimSafe AI Research Team",
+    "date_created": "2026-02-16"
+  },
+  "licenses": [
+    {
+      "id": 1,
+      "name": "CC BY 4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "categories": [
+    {
+      "id": 0,
+      "name": "normal_swimming",
+      "supercategory": "swimming_behavior"
+    },
+    {
+      "id": 1,
+      "name": "drowning_active",
+      "supercategory": "drowning"
+    },
+    {
+      "id": 2,
+      "name": "drowning_passive",
+      "supercategory": "drowning"
+    },
+    {
+      "id": 3,
+      "name": "swimming_distress",
+      "supercategory": "swimming_behavior"
+    }
+  ],
+  "images": [
+    {
+      "id": 1,
+      "file_name": "V001_frame_0000.jpg",
+      "width": 1920,
+      "height": 1080,
+      "date_captured": "2026-01-15T10:30:00",
+      "video_id": "V001",
+      "frame_number": 0
+    },
+    {
+      "id": 2,
+      "file_name": "V001_frame_0030.jpg",
+      "width": 1920,
+      "height": 1080,
+      "date_captured": "2026-01-15T10:30:01",
+      "video_id": "V001",
+      "frame_number": 30
+    },
+    {
+      "id": 3,
+      "file_name": "V003_frame_0300.jpg",
+      "width": 1920,
+      "height": 1080,
+      "date_captured": "2026-01-16T14:20:10",
+      "video_id": "V003",
+      "frame_number": 300
+    },
+    {
+      "id": 4,
+      "file_name": "V003_frame_0330.jpg",
+      "width": 1920,
+      "height": 1080,
+      "date_captured": "2026-01-16T14:20:11",
+      "video_id": "V003",
+      "frame_number": 330
+    },
+    {
+      "id": 5,
+      "file_name": "V005_frame_0200.jpg",
+      "width": 1920,
+      "height": 1080,
+      "date_captured": "2026-01-17T11:15:07",
+      "video_id": "V005",
+      "frame_number": 200
+    }
+  ],
+  "annotations": [
+    {
+      "id": 1,
+      "image_id": 1,
+      "category_id": 0,
+      "bbox": [450, 320, 220, 380],
+      "area": 83600,
+      "iscrowd": 0,
+      "attributes": {
+        "head_above_water": true,
+        "movement_intensity": "moderate",
+        "body_orientation": "horizontal",
+        "confidence": 1.0
+      }
+    },
+    {
+      "id": 2,
+      "image_id": 2,
+      "category_id": 0,
+      "bbox": [470, 325, 215, 375],
+      "area": 80625,
+      "iscrowd": 0,
+      "attributes": {
+        "head_above_water": true,
+        "movement_intensity": "moderate",
+        "body_orientation": "horizontal",
+        "confidence": 1.0
+      }
+    },
+    {
+      "id": 3,
+      "image_id": 3,
+      "category_id": 1,
+      "bbox": [520, 280, 200, 420],
+      "area": 84000,
+      "iscrowd": 0,
+      "attributes": {
+        "head_above_water": false,
+        "movement_intensity": "high",
+        "body_orientation": "vertical",
+        "confidence": 1.0
+      }
+    },
+    {
+      "id": 4,
+      "image_id": 4,
+      "category_id": 1,
+      "bbox": [518, 290, 205, 415],
+      "area": 85075,
+      "iscrowd": 0,
+      "attributes": {
+        "head_above_water": false,
+        "movement_intensity": "high",
+        "body_orientation": "vertical",
+        "confidence": 1.0
+      }
+    },
+    {
+      "id": 5,
+      "image_id": 5,
+      "category_id": 2,
+      "bbox": [600, 400, 180, 320],
+      "area": 57600,
+      "iscrowd": 0,
+      "attributes": {
+        "head_above_water": false,
+        "movement_intensity": "none",
+        "body_orientation": "horizontal_face_down",
+        "confidence": 1.0
+      }
+    }
+  ]
+}
