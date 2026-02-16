@@ -1,0 +1,4 @@
+# Test Set - 15% of dataset
+# Format: video_id,filename,class
+
+V014,pool_distress_003.mp4,3
