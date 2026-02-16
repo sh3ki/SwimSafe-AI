@@ -1,0 +1,14 @@
+# Training Set - 70% of dataset
+# Format: video_id,filename,class
+
+V001,pool_normal_001.mp4,0
+V002,pool_normal_002.mp4,0
+V003,pool_drowning_active_001.mp4,1
+V004,pool_drowning_active_002.mp4,1
+V005,pool_drowning_passive_001.mp4,2
+V007,pool_distress_001.mp4,3
+V009,pool_normal_003.mp4,0
+V010,pool_normal_004.mp4,0
+V011,pool_drowning_active_003.mp4,1
+V013,pool_normal_005.mp4,0
+V015,pool_drowning__004.mp4,1
