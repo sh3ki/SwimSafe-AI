@@ -1,0 +1,16 @@
+video_id,filename,class,class_name,start_frame,end_frame,duration_sec,pool_type,lighting,weather,num_people,camera_angle,resolution,fps,annotator_id,notes
+V001,pool_normal_001.mp4,0,normal_swimming,0,900,30,indoor,artificial,clear,1,overhead,1920x1080,30,ANN001,Adult male swimming laps
+V002,pool_normal_002.mp4,0,normal_swimming,0,600,20,outdoor,natural,sunny,2,side_view,1920x1080,30,ANN001,Two children playing safely
+V003,pool_drowning_active_001.mp4,1,drowning_active,300,750,15,indoor,artificial,clear,1,overhead,1920x1080,30,ANN002,Simulated active drowning - arms extended
+V004,pool_drowning_active_002.mp4,1,drowning_active,150,600,15,outdoor,natural,cloudy,1,45_degree,1920x1080,30,ANN002,Vertical body position struggling
+V005,pool_drowning_passive_001.mp4,2,drowning_passive,200,800,20,indoor,artificial,clear,1,overhead,1920x1080,30,ANN003,Motionless floating face-down
+V006,pool_drowning_passive_002.mp4,2,drowning_passive,100,700,20,outdoor,natural,sunny,1,side_view,1920x1080,30,ANN003,Submerged no movement
+V007,pool_distress_001.mp4,3,swimming_distress,0,900,30,indoor,artificial,clear,1,overhead,1920x1080,30,ANN001,Swimmer showing fatigue and irregular patterns
+V008,pool_distress_002.mp4,3,swimming_distress,200,800,20,outdoor,natural,overcast,1,45_degree,1920x1080,30,ANN001,Swimmer waving for attention
+V009,pool_normal_003.mp4,0,normal_swimming,0,1200,40,indoor,artificial,clear,3,overhead,1920x1080,30,ANN002,Multiple swimmers doing laps
+V010,pool_normal_004.mp4,0,normal_swimming,0,450,15,outdoor,natural,sunny,1,side_view,1920x1080,30,ANN003,Child learning to swim with instructor nearby
+V011,pool_drowning_active_003.mp4,1,drowning_active,400,850,15,indoor,low_light,clear,1,overhead,1920x1080,30,ANN001,Evening time low light condition
+V012,pool_drowning_passive_003.mp4,2,drowning_passive,250,850,20,outdoor,natural,rainy,1,overhead,1920x1080,30,ANN002,Rainy weather condition
+V013,pool_normal_005.mp4,0,normal_swimming,0,1500,50,outdoor,natural,sunny,4,45_degree,1920x1080,30,ANN003,Crowded pool multiple swimmers
+V014,pool_distress_003.mp4,3,swimming_distress,300,900,20,indoor,artificial,clear,1,side_view,1920x1080,30,ANN001,Struggling but still moving forward
+V015,pool_drowning_active_004.mp4,1,drowning_active,200,650,15,outdoor,natural,cloudy,1,overhead,1920x1080,30,ANN002,Head bobbing gasping for air
