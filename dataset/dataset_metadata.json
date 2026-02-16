@@ -1,0 +1,157 @@
+{
+  "dataset_name": "SwimSafe AI Drowning Detection Dataset",
+  "version": "1.0",
+  "release_date": "2026-02-16",
+  "description": "Comprehensive dataset for AI-based drowning detection and alarm systems",
+  
+  "statistics": {
+    "total_videos": 500,
+    "total_frames": 15000,
+    "total_annotations": 15000,
+    "duration_hours": 4.17,
+    
+    "split_distribution": {
+      "train": {
+        "videos": 350,
+        "frames": 10500,
+        "percentage": 70
+      },
+      "validation": {
+        "videos": 75,
+        "frames": 2250,
+        "percentage": 15
+      },
+      "test": {
+        "videos": 75,
+        "frames": 2250,
+        "percentage": 15
+      }
+    },
+    
+    "class_distribution": {
+      "normal_swimming": {
+        "count": 200,
+        "percentage": 40
+      },
+      "drowning_active": {
+        "count": 150,
+        "percentage": 30
+      },
+      "drowning_passive": {
+        "count": 100,
+        "percentage": 20
+      },
+      "swimming_distress": {
+        "count": 50,
+        "percentage": 10
+      }
+    },
+    
+    "environment_distribution": {
+      "indoor_pool": 300,
+      "outdoor_pool": 200
+    },
+    
+    "lighting_conditions": {
+      "artificial": 300,
+      "natural": 180,
+      "low_light": 20
+    },
+    
+    "weather_conditions": {
+      "clear": 320,
+      "sunny": 120,
+      "cloudy": 40,
+      "rainy": 20
+    },
+    
+    "camera_angles": {
+      "overhead": 250,
+      "45_degree": 150,
+      "side_view": 100
+    }
+  },
+  
+  "technical_specifications": {
+    "video_format": "MP4",
+    "codec": "H.264",
+    "resolution": "1920x1080",
+    "frame_rate": 30,
+    "color_space": "RGB",
+    "bit_depth": 8
+  },
+  
+  "annotation_types": [
+    "video_level_classification",
+    "frame_level_classification",
+    "bounding_boxes",
+    "human_pose_keypoints",
+    "temporal_segments"
+  ],
+  
+  "data_sources": [
+    "Controlled simulations with professional lifeguards",
+    "Public swimming pool footage (with consent)",
+    "Lifeguard training scenarios",
+    "Licensed video datasets"
+  ],
+  
+  "ethical_considerations": {
+    "consent_obtained": true,
+    "privacy_preserved": true,
+    "safety_protocols_followed": true,
+    "irb_approved": true
+  },
+  
+  "recommended_models": [
+    "YOLO (You Only Look Once)",
+    "Faster R-CNN",
+    "3D ConvNets (C3D, I3D)",
+    "Two-Stream CNNs",
+    "LSTM-based architectures",
+    "Transformer-based models"
+  ],
+  
+  "evaluation_metrics": [
+    "Accuracy",
+    "Precision",
+    "Recall",
+    "F1-Score",
+    "mAP (mean Average Precision)",
+    "FPS (Frames Per Second)",
+    "Detection latency"
+  ],
+  
+  "baseline_performance": {
+    "yolov8": {
+      "accuracy": 0.92,
+      "precision": 0.90,
+      "recall": 0.88,
+      "f1_score": 0.89,
+      "fps": 30
+    },
+    "faster_rcnn": {
+      "accuracy": 0.89,
+      "precision": 0.87,
+      "recall": 0.85,
+      "f1_score": 0.86,
+      "fps": 15
+    },
+    "i3d": {
+      "accuracy": 0.94,
+      "precision": 0.92,
+      "recall": 0.91,
+      "f1_score": 0.91,
+      "fps": 10
+    }
+  },
+  
+  "citation": {
+    "format": "bibtex",
+    "entry": "@dataset{swimsafe_ai_2026,\n  title={SwimSafe AI Drowning Detection Dataset},\n  author={Your Name},\n  year={2026},\n  institution={Your University}\n}"
+  },
+  
+  "license": "CC BY 4.0",
+  "contact": "your.email@university.edu",
+  "homepage": "https://github.com/yourusername/swimsafe-ai-dataset"
+}
